@@ -1,0 +1,20 @@
+<h1>Edit Page: <%= @title %></h1>
+
+<div>
+  <form method='post' action="/<%= @title %>">
+
+  <%# Html form method only supports GET and POST values. 
+  But Sinatra can support put requests in spite of this limitation. It's been programmed to look for an additional parameter in form data, named _method. The underscore is to prevent conflicts in case you have an actual form field named method. If it sees an underscore method parameter, and its value is put, then Sinatra will treat the post request as if it was a put request.%>
+  <input type="hidden" name="_method" value="put">
+
+    <fieldset>
+      <label for='content'>Content:</label>
+      <textarea rows='10' columns='50' name='content' id='content'><%= @content %></textarea>
+    </fieldset>
+
+    <input type='submit'>
+
+  </form>
+</div>
+
+<a href='/'>Back to Index</a>

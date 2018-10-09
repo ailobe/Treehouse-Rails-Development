@@ -1,0 +1,21 @@
+<%#
+In the wiki app, add a list of all the available wiki pages. The Dir class from Ruby core has an each method that will let you get a list of all the files in the pages/ subdirectory; you can use those to build clickable links.
+%>
+<h1>Welcome to our wiki!</h1>
+
+<p>Visit /PageName to view a page or click in a page below.</p>
+
+<p>Or, you can <a href="/new">create a new page</a>.</p>
+
+<p><br></p>
+
+<h2>Available Wiki Pages</h2>
+
+<% files = Dir.glob("pages/*.txt") %>
+<% files.map! {|s| s.split("/").last} %>
+<% files.map! {|s| s.split(".").first} %>
+
+<% files.each do |f|%>
+    <a href="/<%= f %>"><%= f %></a>
+<% end %>
+

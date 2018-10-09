@@ -1,0 +1,2 @@
+The following code it's being escaped:
+<script>alert('boo');</script>
