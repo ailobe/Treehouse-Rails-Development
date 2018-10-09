@@ -8,5 +8,5 @@ While building this project we've learned:
 * The paths each request includes
 * Using those request types and paths to set up Sinatra routes
 * Embedding data in the ERB templates
-* Using URL and form parameters to save data, serving static files including CSS style sheets.
-* And using ERB layouts to get rid of duplicated template code.
+* Using URL and form parameters to save data and serving static files including CSS style sheets.
+* Using ERB layouts to get rid of duplicated template code.
